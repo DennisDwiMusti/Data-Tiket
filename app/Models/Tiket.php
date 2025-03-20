@@ -9,7 +9,7 @@ class Tiket extends Model
 {
     use HasFactory;
 
-    protected $table = 'tikets';
+    protected $table = 'tiket';
     protected $fillable = ['Stasiun', 'Tujuan', 'harga', 'tanggal'];
 
     public function stasiun()
