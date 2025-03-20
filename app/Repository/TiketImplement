@@ -1,0 +1,37 @@
+<?php
+
+namespace App\Repository;
+
+use App\Models\Tiket;
+use App\Repository\TiketRepository; 
+
+class TiketImplement implements TiketRepository
+{
+    public function getAll()
+    {
+        return Tiket::all();
+    }
+
+    public function findById(int $id)
+    {
+        return Tiket::find($id);
+    }
+
+    public function store($data)
+    {
+        return Tiket::create($data);
+    }
+
+    public function update($data, $id)
+    {
+        $tiket = Tiket::findOrFail($id);
+        $tiket->update($data);
+        return $tiket;
+    }
+
+    public function destroy($id)
+    {
+        $tiket = Tiket::findOrFail($id);
+        return $tiket->delete();
+    }
+}
