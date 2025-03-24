@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ubah Data Tiket</title>
+    <title>Ubah Data tiket</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body class="container py-5">
     <div class="card p-4 mx-auto" style="max-width: 600px;">
-        <h2 class="text-center mb-4">Ubah Data Tiket</h2>
+        <h2 class="text-center mb-4">Ubah Data tiket</h2>
 
         <form action="{{ route('tiket.update', $tiket->id) }}" method="POST">
             @csrf
@@ -31,25 +31,25 @@
             </div>
 
             <div class="mb-3">
-                <label for="NIS" class="form-label">NIS:</label>
-                <input type="text" name="NIS" id="NIS" class="form-control" value="{{ $tiket->NIS }}" placeholder="Masukkan NIS" required>
+                <label for="harga" class="form-label">harga:</label>
+                <input type="text" name="harga" id="harga" class="form-control" value="{{ $tiket->harga }}" placeholder="Masukkan harga" required>
             </div>
 
             <div class="mb-3">
-                <label for="rayon_id" class="form-label">Rayon:</label>
-                <select name="rayon_id" id="rayon_id" class="form-control" required>
-                    <option value="" disabled>Pilih Rayon</option>
-                    @foreach ($rayons as $rayon)
-                        <option value="{{ $rayon->id }}" {{ $tiket->rayon_id == $rayon->id ? 'selected' : '' }}>
-                            {{ $rayon->name }}
+                <label for="stasiun_id" class="form-label">stasiun:</label>
+                <select name="stasiun_id" id="stasiun_id" class="form-control" required>
+                    <option value="" disabled>Pilih stasiun</option>
+                    @foreach ($stasiuns as $stasiun)
+                        <option value="{{ $stasiun->id }}" {{ $tiket->stasiun_id == $stasiun->id ? 'selected' : '' }}>
+                            {{ $stasiun->name }}
                         </option>
                     @endforeach
                 </select>
             </div>
 
             <div class="mb-3">
-                <label for="stasiun" class="form-label">Stasiun:</label>
-                <input type="text" name="stasiun" id="stasiun" class="form-control" value="{{ $tiket->stasiun }}" placeholder="Masukkan Stasiun" required>
+                <label for="tanggal" class="form-label">tanggal:</label>
+                <input type="text" name="tanggal" id="tanggal" class="form-control" value="{{ $tiket->tanggal }}" placeholder="Masukkan tanggal" required>
             </div>
 
             <div class="text-center">

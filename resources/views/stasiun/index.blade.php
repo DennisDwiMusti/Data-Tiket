@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Stasiun</title>
+    <title>Data stasiun</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 <body class="container py-4">
@@ -15,7 +15,7 @@
         <div class="alert alert-danger">{{ Session::get('deleted') }}</div>
     @endif
 
-    <h1 class="mb-4">Data Stasiun</h1>
+    <h1 class="mb-4">Data stasiun</h1>
     <div>
         <a href="{{ route('tiket.index') }}" class="btn btn-success mb-3">data tiket</a>
     </div>
@@ -23,7 +23,7 @@
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
-                <th>Stasiun</th>
+                <th>stasiun</th>
                 <th class="text-center">Aksi</th>
             </tr>
         </thead>
@@ -48,7 +48,7 @@
                 @method('DELETE')
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Data Stasiun <strong id="name-stasiun"></strong></h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus Data stasiun <strong id="name-stasiun"></strong></h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
