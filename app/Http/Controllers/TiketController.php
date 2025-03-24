@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Tiket;
 use App\Models\Stasiun;
 use Illuminate\Http\Request;
@@ -14,6 +15,7 @@ class TiketController extends Controller
      */
     public function index()
     {
+        //
         $tikets = Tiket::with('stasiun')->get();
         return view('tiket.index', compact('tikets'));
     }
@@ -69,6 +71,7 @@ class TiketController extends Controller
     {
         $this->tiketRepository->update($request->all(), $id);
         return redirect()->route('tiket.index')->with('success', 'Data tiket berhasil diubah');
+
     }
 
     /**
@@ -85,4 +88,5 @@ class TiketController extends Controller
         $this->tiketRepository->destroy($id);
         return redirect()->route('tiket.index')->with('deleted', 'Data tiket berhasil dihapus');
     }
+
 }
