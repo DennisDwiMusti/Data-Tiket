@@ -7,7 +7,6 @@ use App\Repository\StasiunRepository;
 
 class StasiunImplement implements StasiunRepository
 {
-
     public function getAll()
     {
         Stasiun::all();
@@ -17,19 +16,19 @@ class StasiunImplement implements StasiunRepository
     {
         Stasiun::find($id);
     }
+
     public function store($data)
     {
         Stasiun::create($data);
     }
-
     public function update($data, $id)
     {
-        $Stasiun = Stasiun::findorFail($id);
-        $Stasiun->update($data);
+        $stasiun = Stasiun::findOrFail($id);
+        $stasiun->update($data);
     }
     public function destroy($id)
     {
-        $Stasiun = Stasiun::findorFail($id);
-        $Stasiun->delete();
+        $stasiun = Stasiun::findorFail($id);
+        $stasiun->delete();
     }
 }
