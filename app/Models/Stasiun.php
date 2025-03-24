@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Stasiun extends Model
 {
@@ -14,6 +14,6 @@ class Stasiun extends Model
 
     public function tiket()
     {
-        return $this->hasMany(Tiket::class);
+        return $this->hasMany(tiket::class);
     }
 }
