@@ -2,11 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use App\Repository\TiketRepository;
-use App\Repository\TiketImplement;
 use App\Repository\StasiunRepository;
+use App\Repository\TiketImplement;
 use App\Repository\StasiunImplement;
+use Illuminate\Support\ServiceProvider;
 
 class RepoServiceProvider extends ServiceProvider
 {
