@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tikets', function (Blueprint $table) {
+        Schema::create('tiket', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('stasiun_id')->constrained('stasiuns')->onDelete('cascade');
-            $table->string('Tujuan');
+            $table->string('name');
             $table->integer('harga');
-            $table->date('tanggal');
+            $table->foreignId('stasiun_id')->constrained('stasiuns')->onDelete('cascade');
+            $table->string('tanggal');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tikets');
+        Schema::dropIfExists('tiket');
     }
 };
