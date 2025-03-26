@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repository\Tiket;
 
 use App\Models\Tiket;
-use App\Repository\TiketRepository;
+use App\Repository\Tiket\TiketRepository;
 
-class TiketImplement implements TiketRepository
+class TiketRepositoryImplement implements TiketRepository
 {
 
     public function getAll()

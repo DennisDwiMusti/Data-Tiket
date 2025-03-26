@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repository;
+namespace App\Repository\Stasiun;
 
 use App\Models\Stasiun;
-use App\Repository\StasiunRepository;
+use App\Repository\Stasiun\StasiunRepository;
 
-class StasiunImplement implements StasiunRepository
+class StasiunRepositoryImplement implements StasiunRepository
 {
     public function getAll()
     {
