@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Repository\TiketRepository;
-use App\Repository\StasiunRepository;
-use App\Repository\TiketImplement;
-use App\Repository\StasiunImplement;
+use App\Repository\Tiket\TiketRepository;
+use App\Repository\Stasiun\StasiunRepository;
+use App\Repository\Tiket\TiketRepositoryImplement;
+use App\Repository\Stasiun\StasiunRepositoryImplement;
 use Illuminate\Support\ServiceProvider;
 
 class RepoServiceProvider extends ServiceProvider
@@ -15,8 +15,8 @@ class RepoServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->bind(TiketRepository::class, TiketImplement::class);
-        $this->app->bind(StasiunRepository::class, StasiunImplement::class);
+        $this->app->bind(TiketRepository::class, TiketRepositoryImplement::class);
+        $this->app->bind(StasiunRepository::class, StasiunRepositoryImplement::class);
     }
 
     /**
