@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Stasiun;
 use Illuminate\Http\Request;
-use App\Repository\StasiunRepository;
+use App\Repository\Stasiun\StasiunRepository;
 
 class StasiunController extends Controller
 {

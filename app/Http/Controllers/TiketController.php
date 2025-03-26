@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Tiket;
 use App\Models\Stasiun;
 use Illuminate\Http\Request;
-use App\Repository\TiketRepository;
+use App\Repository\Tiket\TiketRepository;
 
 class TiketController extends Controller
 {
