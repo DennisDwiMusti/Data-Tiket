@@ -10,16 +10,16 @@ class TiketRepositoryImplement implements TiketRepository
 
     public function getAll()
     {
-        Tiket::all();
+        return Tiket::all();
     }
 
     public function findById(int $id)
     {
-        Tiket::find($id);
+        return Tiket::find($id);
     }
     public function store($data)
     {
-        Tiket::create($data);
+        return Tiket::create($data);
     }
 
     public function update($data, $id)
