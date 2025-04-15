@@ -9,17 +9,17 @@ class StasiunRepositoryImplement implements StasiunRepository
 {
     public function getAll()
     {
-        Stasiun::all();
+        return Stasiun::all();
     }
 
     public function findById(int $id)
     {
-        Stasiun::find($id);
+        return Stasiun::find($id);
     }
 
     public function store($data)
     {
-        Stasiun::create($data);
+        return Stasiun::create($data);
     }
     public function update($data, $id)
     {
