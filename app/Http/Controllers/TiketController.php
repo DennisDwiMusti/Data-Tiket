@@ -10,6 +10,14 @@ use App\Repository\Tiket\TiketRepository;
 
 class TiketController extends Controller
 {
+
+    protected $tiketRepository;
+
+    public function __construct(TiketRepository $repository)
+    {
+        $this->tiketRepository = $repository;
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -32,13 +40,6 @@ class TiketController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-
-    protected $tiketRepository;
-
-    public function __construct(TiketRepository $repository)
-    {
-        $this->tiketRepository = $repository;
-    }
 
     public function store(Request $request)
     {

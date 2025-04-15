@@ -9,6 +9,13 @@ use App\Repository\Stasiun\StasiunRepository;
 
 class StasiunController extends Controller
 {
+
+    protected $stasiunRepository;
+
+    public function __construct(StasiunRepository $repository)
+    {
+        $this->stasiunRepository = $repository;
+    }
     /**
      * Display a listing of the resource.
      */
@@ -26,14 +33,6 @@ class StasiunController extends Controller
     {
         //
         return view('stasiun.create');
-    }
-
-    protected $stasiunRepository
-;
-
-    public function __construct(StasiunRepository $repository)
-    {
-        $this->stasiunRepository = $repository;
     }
 
     /**
